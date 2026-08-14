@@ -19,7 +19,7 @@ jobs:
 
       - name: Install Application Dependencies
         run: |
-          cd devsecops-with-github-actions-end-to-end-nodejs-project-master/devsecops-with-github-actions-end-to-end-nodejs-project-master
+          cd devsecops-with-github-actions-end-to-end-nodejs-project-master
           npm install
 
       - name: SonarCloud Scan (SAST)
@@ -42,7 +42,7 @@ jobs:
 
       - name: Run Snyk Open Source Scan (SCA)
         run: |
-          cd devsecops-with-github-actions-end-to-end-nodejs-project-master/devsecops-with-github-actions-end-to-end-nodejs-project-master
+          cd devsecops-with-github-actions-end-to-end-nodejs-project-master
           npx snyk test --token=${{ secrets.SNYK_TOKEN }}
         continue-on-error: true
 
